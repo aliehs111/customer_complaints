@@ -1,0 +1,13 @@
+Field name,Table,Definition
+Complaint ID,complaints_banking_2023,ID of the complaint
+Date Received,complaints_banking_2023,Date that the complaint was received by the bank
+Banking Product,complaints_banking_2023,Bank product involved in complaint
+Issue ID,complaints_banking_2023,Unique ID for any issue
+Complaint Description,complaints_banking_2023,Full text of the customer's complaint
+State,complaints_banking_2023,State (US) of the customer's residence
+ZIP,complaints_banking_2023,ZIP code of the customer's residence
+Bank Response,complaints_banking_2023,Bank's response to the customer who filed the complaint
+Banking Product,Department of Product,Bank product involved in complaint
+Department,Department of Product,Depenartment which caters to specific product categories
+Issue,Issues,Issue category of complaint
+Issue_ID,Issues,Unique ID for any issue
