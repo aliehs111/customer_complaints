@@ -88,3 +88,26 @@ neutral 318
 - Fine-tune a transformer on `(clean_text, department)` to boost routing accuracy.  
 - Integrate additional customer metadata for richer feature sets.  
 - Automate daily scoring and reporting in a dashboard.
+
+
+## 1. Data & Exploration
+ - Confirmed Others department had only 1 complaint, causing issues with stratified sampling.
+## 2. Text Preprocessing
+ - Fixed KeyError: 'Complaint Text' by using correct column Complaint Description.
+ - Resolved LookupError: punkt_tab by adding nltk.download('punkt_tab').
+## 3. Department Routing Models
+ - 3.2 Transformer (Zero-Shot BART-MNLI)
+ - Replaced fine-tuning with zero-shot facebook/bart-large-mnli (previously DeBERTa).
+ - Reduced test set to 100 samples for faster runtime (~2–3 min on MPS).
+ - Simplified prompts and used 2 few-shot examples per department.
+ - Filtered out Others to avoid sampling errors.
+ - Accuracy: 0.22 (down from 0.51, needs further tuning).
+ - Macro F1: 0.06 (poor, likely due to prompt mismatch or data complexity).
+ - Added tqdm progress bar and sample prediction output for debugging.
+
+
+## 4. Issues Fixed
+ - Handled ValueError in train_test_split by removing stratify and filtering Others.
+ - Fixed SettingWithCopyWarning with df.loc[:, "clean_text"].
+ - Added error handling for classifier initialization and classification loop.
+
