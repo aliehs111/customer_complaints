@@ -1,4 +1,4 @@
-## Progress Notes (Updated 6-28-25)
+## Project Notes - Summary
 
 ### 1. Data & Exploration
 - Loaded `banking_complaints.csv` and `dept_product.csv`; checked dtypes and missing values.
